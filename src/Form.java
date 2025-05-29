@@ -1,28 +1,37 @@
-//public accessible class, defined in a file with same name.
-class Form {
+package ro.ulbs.paradigme.lab2.api;
+
+public class Form {
     private String color;
+    private static int counter=0;
 
     public Form() {
-        this.color = "white";
+        color = "white";
+        if (this.getClass() == Form.class) {
+            counter++;
+        }
     }
 
-    public Form(String color) {
+    public Form(String c){
+        color=c;
+        if(this.getClass() == Form.class) {
+            counter++;
+        }
 
-        this.color = color;
     }
 
-    float getArea() {
-        int i = 0;
-        return i;
+    public float getArea() {
+        return 0;
     }
 
-    @Override
-    public String toString() {
-        return "this form has the color" + color;
+    public String toString(){
+        return "This form has the color" +color;
     }
 
     public String getColor() {
         return color;
     }
 
+    public static int getCounter() {
+        return counter;
+    }
 }

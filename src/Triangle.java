@@ -1,36 +1,37 @@
-class Triangle extends Form {
-    private float height;
-    private float base;
+package ro.ulbs.paradigme.lab2.api;
 
-    public Triangle() {
+public class Triangle extends Form{
+    private float height, base;
+
+    public Triangle (){
         super();
-        this.height = 1;
-        this.base = 1;
+        this.height = 0;
+        this.base = 0;
     }
-    public Triangle(float height, float base, String color) {
+
+    public Triangle(float height, float base,String color){
         super(color);
         this.height = height;
         this.base = base;
     }
 
-    public float getArea() {
-        return (base * height) / 2;
+    @Override
+    public float getArea(){
+        return (height * base)/2;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-
-        Triangle other = (Triangle) obj;
-        return this.base == other.base &&
-                this.height == other.height &&
-                this.getColor().equals(other.getColor());
+    public String toString(){
+        return super.toString() + "\nHeight: " + height + "\nBase: " + base;
     }
+
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Triangle t){
+            return this.base==t.base && this.height==t.height && t.getColor().equals(this.getColor());
+        }
+        return false;
+    }
+
+
 }
-
-
