@@ -1,4 +1,4 @@
-package ro.ulbs.paradigme.lab2.api;
+package ro.ulbs.paradigme.lab2;
 
 public class Application {
     public static void main(String[] args) {

@@ -1,4 +1,5 @@
-//public accessible class, defined in a file with same name.
+package ro.ulbs.paradigme.lab2;
+
 class Main {
     private String color;
 

@@ -1,4 +1,4 @@
-package ro.ulbs.paradigme.lab2.api;
+package ro.ulbs.paradigme.lab2;
 
 public class Triangle extends Form{
     private float height, base;
